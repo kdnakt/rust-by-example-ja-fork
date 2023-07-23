@@ -21,7 +21,7 @@ macro_rules! calculate {
     // 単一の`eval`のためのパターン
     // The pattern for a single `eval`
     (eval $e:expr) => {
-        {
+        {                        // 強制的に型を整数にする
             let val: usize = $e; // Force types to be integers
             println!("{} = {}", stringify!{$e}, val);
         }
